@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="../css/anasayfa.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="anasayfa.html">
+                    <img src="../images/dnrLogo.png" alt="avisLogo">
+                </a>
+            </div>
+            <div class="logout">
+                <a href="adminGiris.html">Çıkış Yap</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="navbar">
+        <ul class="navbar-items">
+            <a href="anasayfa.html">
+                <li class="navbar-item">Anasayfa</li>
+            </a>
+            <a href="subeler.html">
+                <li class="navbar-item">Şubeler</li>
+            </a>
+            <a href="karsilastirma.html">
+                <li class="navbar-item">Karşılaştırma</li>
+            </a>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Grafiklerin 2x2 şeklinde düzenlenmesi -->
+        <div class="chart-container">
+            <canvas id="salesExpensesChart" class="chart"></canvas>
+            <canvas id="totalSalesChart" class="chart"></canvas>
+            <canvas id="mostProfitableChart" class="chart" ></canvas>
+            <canvas id="leastProfitableChart" class="chart" style="height: 162px"></canvas>
+        </div>
+
+    <!-- Haritaların Yan Yana Yerleştirildiği Alan -->
+        <div id="map-container">
+            <div id="population-map"></div>
+            <div id="map"></div>
+        </div>
+
+        <!-- Şubelerin İlçelerini Gösteren Tablo -->
+        <table id="branchesTable" border="1">
+            <thead>
+                <tr>
+                    <th>Şube Adı</th>
+                    <th>İlçe Adı</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Şubeler ve ilçeler buraya yüklenecek -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="../js/anasayfa.js"></script>
+</body>
+
+</html>

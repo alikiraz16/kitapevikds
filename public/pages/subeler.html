@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şubeler</title>
+    <link rel="stylesheet" href="../css/subeler.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="anasayfa.html">
+                    <img src="../images/dnrLogo.png" alt="avisLogo">
+                </a>
+            </div>
+            <div class="logout">
+                <a href="adminGiris.html">Çıkış Yap</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="navbar">
+        <ul class="navbar-items">
+            <a href="anasayfa.html">
+                <li class="navbar-item">Anasayfa</li>
+            </a>
+            <a href="subeler.html">
+                <li class="navbar-item">Şubeler</li>
+            </a>
+            <a href="karsilastirma.html">
+                <li class="navbar-item">Karşılaştırma</li>
+            </a>
+        </ul>
+    </div>
+
+    <main>
+        <div class="content-container">
+            <h2>Şubelerin Satış Miktarları</h2>
+
+            <!-- Filtreleme Seçenekleri -->
+            <div class="filters">
+            <!-- Filtreleme Seçenekleri -->
+            <div class="filters">
+                <select id="yearSelect">
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                </select>
+                <select id="quarterSelect">
+                    <option value="1">1. Çeyrek</option>
+                    <option value="2">2. Çeyrek</option>
+                    <option value="3">3. Çeyrek</option>
+                    <option value="4">4. Çeyrek</option>
+                    <option value="all">Tüm Yıl</option> <!-- Bu seçenek tüm yıl verisini getirecek -->
+                </select>
+            </div>
+            </div>
+
+            <!-- Üst Satış Miktarı ve Gelir Grafikleri -->
+            <div class="top-row">
+                <div class="chart-container">
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Alt Masraflar Grafiği -->
+            <div class="bottom-row">
+                <div class="chart-container">
+                    <canvas id="expensesChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/subeler.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karşılaştırma</title>
+    <link rel="stylesheet" href="../css/karsilastirma.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="anasayfa.html">
+                    <img src="../images/dnrLogo.png" alt="avisLogo">
+                </a>
+            </div>
+            <div class="logout">
+                <a href="adminGiris.html">Çıkış Yap</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="navbar">
+        <ul class="navbar-items">
+            <a href="anasayfa.html">
+                <li class="navbar-item">Anasayfa</li>
+            </a>
+            <a href="subeler.html">
+                <li class="navbar-item">Şubeler</li>
+            </a>
+            <a href="karsilastirma.html">
+                <li class="navbar-item active">Karşılaştırma</li>
+            </a>
+        </ul>
+    </div>
+
+    <main>
+        <div class="comparison-container">
+            <h2>Şube Karşılaştırması</h2>
+    
+            <!-- Şube seçim formu -->
+            <form id="comparisonForm">
+                <label for="sube1">Şube 1:</label>
+                <select id="sube1" name="sube1">
+                    <!-- Şube seçenekleri burada yüklenecek -->
+                </select>
+    
+                <label for="sube2">Şube 2:</label>
+                <select id="sube2" name="sube2">
+                    <!-- Şube seçenekleri burada yüklenecek -->
+                </select>
+    
+                <button type="submit">Karşılaştır</button>
+            </form>
+    
+            <!-- Grafikler için container -->
+            <div class="charts-container">
+                
+                <!-- Satışlar için Grafik alanı -->
+                <canvas id="salesChart"></canvas> <!-- Grafik buraya gelecek -->
+    
+                <!-- Masraflar için Grafik alanı -->
+                <canvas id="expenseChart"></canvas> <!-- Masraf grafiği buraya gelecek -->
+            </div>
+    
+            <!-- Karlar için Grafik alanı -->
+            <canvas id="profitChart"></canvas> <!-- Kar grafiği buraya gelecek -->
+        </div>
+    </main>
+
+
+    <script src="../js/karsilastirma.js"></script>
+</body>
+
+</html>
